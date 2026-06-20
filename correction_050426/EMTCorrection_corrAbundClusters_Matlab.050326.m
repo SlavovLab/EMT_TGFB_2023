@@ -12,7 +12,7 @@ raw = readcell('EpiToMesen.TGFB.nPoP_trial1_ProtByCellMatrix_NSThreshDART_medInt
 % numeric data (NA -> NaN)
 num = readmatrix('EpiToMesen.TGFB.nPoP_trial1_ProtByCellMatrix_NSThreshDART_medIntCrNorm_unimputed.txt');
 
-% Assign as you requested:
+% Assign
 Cell_Ids = raw(1, 1:end);       % second row, all columns
 ProtIDs_L = raw(2:end, 1);       % first column, from row 2 downward
 dat_L = num(:, 2:end);
@@ -54,7 +54,7 @@ r1 = pearNaN ( dat_Lin(:, ins == 1 )'  );
 r2 = pearNaN ( dat_Lin(:, ins == 2 )'  );
 r3 = pearNaN ( dat_Lin(:, ins == 3 )'  );
 
-%% oOad SwissProt Annotation 
+%% Load SwissProt Annotation 
 
 load ('Human_ONLYsp_Swiss_2_GeneName.mat');
 [Lia,Locb] = ismember( ProtIDs,  HumanONLYspSwiss2GeneName(:, 1 ) );
