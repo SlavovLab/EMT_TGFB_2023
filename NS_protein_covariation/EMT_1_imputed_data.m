@@ -5,7 +5,7 @@
 Path = [path 'Collaborators/EmiliLab/EMT.TGFB_scProt_1/001-SCPipeline_Output/'];
 
 [dat, txt] = xlsread( [Path 'EpiToMesen.TGFB.nPoP_trial1_1PercFDR.xlsx']);
-Cell_Ids = txt(1,2:end);
+Cell_Ids = txt(1,1:end);
 ProtIDs = txt(2:end,1);
 
 [~, IDs] = xlsread( [Path 'cellIDToTimepoint.xlsx']);
